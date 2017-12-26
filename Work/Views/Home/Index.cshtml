@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_myLayoutPage.cshtml";
+}
+
+<div class="jumbotron">
+    <h2>Application</h2>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <p>This is body section</p>
+    </div>
+    <div>
+        <ul>
+
+            <li>@Html.ActionLink("Go To Products", "Index", "Products")</li>
+            <li>@Html.ActionLink("Go To Services", "Index", "Services")</li>
+
+        </ul>
+    </div>
+
+</div>

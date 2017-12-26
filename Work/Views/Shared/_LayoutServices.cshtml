@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - Services</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+   
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Services", "Index", "Services", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("LaptopServices", "LaptopServices", "Services")</li>
+                    <li>@Html.ActionLink("TVServices", "TVServices", "Services")</li>
+                    <li>@Html.ActionLink("MobileServices", "MobileServices", "Services")</li>
+                    <li>@Html.ActionLink("MicrowaveServices", "MicrowaveServices", "Services")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+
+        <footer class="panel-footer">
+            <p>
+                &copy;@DateTime.Now.Year - Capgemini
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
